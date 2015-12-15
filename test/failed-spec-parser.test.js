@@ -85,4 +85,12 @@ describe('failed spec parser', () => {
       '/Users/ntomlin/workspace/protractor-flake/test/support/flakey.test.js'
     ]);
   });
+
+  it('properly handles jasmine-reporters output', function () {
+    let output = readFixture('failed-jasmine-reporters-output.txt');
+
+    expect(failedSpecParser(output)).to.eql([
+      '/Users/user/Downloads/sampletests/failing-test.js'
+    ]);
+  });
 });

@@ -1,0 +1,22 @@
+  Should type a name and verify - fail
+WARNING - more than one element found for locator by.model("checked") - the first result will be used
+  Should check the unchecked check box - pass
+
+
+Failures:
+
+  1) Sample tests Should type a name and verify
+   Message:
+     Expected 'Name' to be 'Name2'.
+   Stacktrace:
+     Error: Expected 'Name' to be 'Name2'.
+    at /Users/user/Downloads/sampletests/failing-test.js:24:26
+    at Array.forEach (native)
+
+Finished in 21.117 seconds
+3 tests, 2 assertions, 1 failure
+
+[launcher] 0 instance(s) of WebDriver still running
+[launcher] chrome #1 failed 1 test(s)
+[launcher] overall: 1 failed spec(s)
+[launcher] Process exited with error code 1
