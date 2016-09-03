@@ -10,7 +10,8 @@ const DEFAULT_OPTIONS = {
   nodeBin: 'node',
   maxAttempts: 3,
   protractorArgs: DEFAULT_PROTRACTOR_ARGS,
-  parser: 'standard'
+  parser: 'standard',
+  cucumberRerunFile: ''
 }
 
 export default function (options = {}, callback = function noop () {}) {

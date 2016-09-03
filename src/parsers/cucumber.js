@@ -1,14 +1,15 @@
 export default {
   name: 'cucumber',
 
-  parse (output) {
-    let match = null
+  parse (cucumberRerunFile) {
     let failedSpecs = []
-    let FAILED_LINES = /(.*?):\d+ # Scenario:.*/g
-    while (match = FAILED_LINES.exec(output)) { // eslint-disable-line no-cond-assign
-      failedSpecs.push(match[1])
-    }
+    let testsOutput = cucumberRerunFile.split(/\r?\n/)
+    let SPECFILE_REG = /:\d+/g
+    testsOutput.forEach(function (test) {
+      let specfile = test.replace(SPECFILE_REG, '')
+      failedSpecs.push(specfile)
 
+    })
     return failedSpecs
   }
 }
